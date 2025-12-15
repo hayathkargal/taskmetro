@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — TaskMetro Bengaluru Errand Services</title>
+  <meta name="description" content="Contact TaskMetro for Bengaluru errand services. Email, phone, and WhatsApp support available Mon-Sat." />
+  <meta name="keywords" content="contact TaskMetro, Bengaluru errand help, customer support" />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Contact — TaskMetro" />
+  <meta property="og:description" content="Reach TaskMetro via email, phone, or WhatsApp." />
+  <meta property="og:image" content="https://taskmetro.com/assets/png.png" />
+  <meta property="og:url" content="https://taskmetro.com/contact.html" />
+  
+  <link rel="icon" type="image/png" href="assets/png.png" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="brand">
+        <img src="assets/png.png" alt="TaskMetro Logo" class="logo" />
+        <span class="brand-name">TaskMetro</span>
+      </a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="request.html" class="cta">Request Task</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Open Menu" onclick="toggleNav()">☰</button>
+    </div>
+  </header>
+
+  <main class="container page">
+    <h1>Contact</h1>
+    <p>Questions, corporate partnerships, or special requests? Reach us via the methods below.</p>
+
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3>📧 Email</h3>
+        <p><a href="mailto:support@taskmetro.com">support@taskmetro.com</a></p>
+        <p class="muted">Typical response within 24 hours.</p>
+      </div>
+      <div class="contact-card">
+        <h3>📞 Phone</h3>
+        <p><a href="tel:+91-00000-00000">+91 00000 00000</a></p>
+        <p class="muted">Available 9am–6pm IST, Mon–Sat.</p>
+      </div>
+      <div class="contact-card">
+        <h3>💬 WhatsApp</h3>
+        <p><a href="https://wa.me/9353522929?text=Hi%20TaskMetro" target="_blank" rel="noopener">Chat on WhatsApp</a></p>
+        <p class="muted">Fastest response for urgent queries.</p>
+      </div>
+      <div class="contact-card">
+        <h3>📍 Coverage</h3>
+        <p>Bengaluru urban limits</p>
+        <p class="muted">For tasks outside, we'll advise feasibility.</p>
+      </div>
+    </div>
+
+    <section class="contact-form">
+      <h2>Quick message</h2>
+      <form class="form" id="contactForm" onsubmit="return submitContact(event)">
+        <!-- Web3Forms Access Key -->
+        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+        <input type="hidden" name="subject" value="TaskMetro Contact Message">
+        <input type="hidden" name="from_name" value="TaskMetro Website">
+        
+        <div class="grid-2">
+          <label>Name
+            <input type="text" name="name" required placeholder="Your name" />
+          </label>
+          <label>Email
+            <input type="email" name="email" required placeholder="your@email.com" />
+          </label>
+        </div>
+        <label>Message
+          <textarea name="message" rows="6" required placeholder="How can we help you?"></textarea>
+        </label>
+        <div class="form-actions">
+          <button type="submit" class="btn primary">Send Message</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="brand-col">
+        <img src="assets/png.png" alt="TaskMetro" class="logo small" />
+        <p>TaskMetro — Bengaluru City Errand Services</p>
+      </div>
+      <div class="links-col">
+        <a href="services.html">Services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="faq.html">FAQs</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="legal-col">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+    <div class="container copyright">
+      <span>© <span id="year"></span> TaskMetro. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

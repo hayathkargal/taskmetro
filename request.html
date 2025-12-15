@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Request a Task — TaskMetro Bengaluru Errand Services</title>
+  <meta name="description" content="Submit a Bengaluru errand request to TaskMetro. Share details for a fast, transparent quote. Get city tasks done remotely." />
+  <meta name="keywords" content="request errand Bangalore, submit task Bengaluru, TaskMetro booking" />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Request a Task — TaskMetro" />
+  <meta property="og:description" content="Submit your Bengaluru task request for a fast quote." />
+  <meta property="og:image" content="https://taskmetro.com/assets/png.png" />
+  <meta property="og:url" content="https://taskmetro.com/request.html" />
+  
+  <link rel="icon" type="image/png" href="assets/png.png" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="brand">
+        <img src="assets/png.png" alt="TaskMetro Logo" class="logo" />
+        <span class="brand-name">TaskMetro</span>
+      </a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="request.html" class="active cta">Request Task</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Open Menu" onclick="toggleNav()">☰</button>
+    </div>
+  </header>
+
+  <main class="container page">
+    <h1>Request a Task</h1>
+    <p>Tell us what you need handled in Bengaluru. We'll review and confirm feasibility with an upfront quote within 24 hours.</p>
+
+    <form class="form" id="requestForm" onsubmit="return submitRequest(event)">
+      <!-- Web3Forms Access Key - Get yours at https://web3forms.com -->
+      <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+      <input type="hidden" name="subject" value="TaskMetro Task Request">
+      <input type="hidden" name="from_name" value="TaskMetro Website">
+      <input type="hidden" name="redirect" value="https://taskmetro.com/thank-you.html">
+      
+      <div class="grid-2">
+        <label>Full Name
+          <input type="text" name="name" required placeholder="John Doe" />
+        </label>
+        <label>Email
+          <input type="email" name="email" required placeholder="john@example.com" />
+        </label>
+      </div>
+      <div class="grid-2">
+        <label>Phone (with country code)
+          <input type="tel" name="phone" required placeholder="+91-9876543210" />
+        </label>
+        <label>Preferred Contact Method
+          <select name="contactMethod">
+            <option>Email</option>
+            <option>Phone</option>
+            <option>WhatsApp</option>
+          </select>
+        </label>
+      </div>
+      <label>Task Category
+        <select name="category" required>
+          <option value="">Select a category</option>
+          <option>Government & RTO</option>
+          <option>Property & Utilities</option>
+          <option>Medical & Pharma</option>
+          <option>Pickups & Deliveries</option>
+          <option>Custom</option>
+        </select>
+      </label>
+      <label>Task Details
+        <textarea name="details" rows="6" placeholder="Describe the task, locations, timelines, items/documents involved, any constraints. Be as specific as possible for an accurate quote." required></textarea>
+      </label>
+      <div class="grid-2">
+        <label>Preferred Date
+          <input type="date" name="date" />
+        </label>
+        <label>Time Sensitivity
+          <select name="urgency">
+            <option>Flexible</option>
+            <option>Within 48 hours</option>
+            <option>Same day (if feasible)</option>
+          </select>
+        </label>
+      </div>
+      <label class="checkbox-label">
+        <input type="checkbox" name="agreeTerms" required />
+        I agree to TaskMetro's <a href="terms.html" target="_blank">Terms</a> and <a href="privacy.html" target="_blank">Privacy Policy</a>
+      </label>
+      <div class="form-actions">
+        <button type="submit" class="btn primary">Submit Request</button>
+        <a class="btn secondary" href="pricing.html">View Pricing</a>
+      </div>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="brand-col">
+        <img src="assets/png.png" alt="TaskMetro" class="logo small" />
+        <p>TaskMetro — Bengaluru City Errand Services</p>
+      </div>
+      <div class="links-col">
+        <a href="services.html">Services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="faq.html">FAQs</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="legal-col">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+    <div class="container copyright">
+      <span>© <span id="year"></span> TaskMetro. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
