@@ -26,6 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
+
+
 // Request form submission
 function submitRequest(e) {
   e.preventDefault();
